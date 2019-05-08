@@ -1,11 +1,4 @@
-require "pry"
-
 class PigLatinizer
-    # attr_reader :text
-
-    # def initialize(text)
-    #     @text = text
-    # end
 
     def piglatinize(string)
         a = string.split(" ")
@@ -14,7 +7,7 @@ class PigLatinizer
     end
 
     def piglatinize_word(word)
-        first_letter = word[0].downcase
+        first_letter = word[0]
         if first_letter.match(/[aeiouAEIOU]/)
             "#{word}way"
         else
